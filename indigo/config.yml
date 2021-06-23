@@ -1,17 +1,15 @@
-INDIGO_WELCOME_MESSAGE: "The place for all your online learning"
+INDIGO_WELCOME_MESSAGE: "Courses for researchers"
 INDIGO_PRIMARY_COLOR: "#3b85ff" # cool blue
 
-# Footer links are dictionaries with a "title" and "url"
-# To remove all links, write:
-# INDIGO_FOOTER_NAV_LINKS: []
-# INDIGO_FOOTER_LEGAL_LINKS: []
 INDIGO_FOOTER_NAV_LINKS:
   - title: "About"
-    url: "/about"
-  - title: "Contact"
-    url: "/contact"
+    url: "https://iknito.ca/about-us-and-iknito/"
+  - title: "Contact us"
+    url: "https://iknito.ca/contact-us/"
 INDIGO_FOOTER_LEGAL_LINKS:
-    - title: "Terms of service"
-      url: "/tos"
-    - title: "Indigo theme for Open edX"
-      url: "https://github.com/overhangio/indigo"
+  - title: "Terms of service"
+    url: "https://iknito.ca/terms-and-conditions/"
+  - title: "Privacy Policy"
+    url: "https://iknito.ca/privacy-policy/"
+  - title: "© 2021 Notion Wave Inc."
+    url: "https://notionwave.ca/"
