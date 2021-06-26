@@ -1,0 +1,233 @@
+.wrapper-footer {
+ box-shadow:0 -1px 5px 0 rgba(0,0,0,0.1);
+ border-top:1px solid #c5c6c7;
+ padding:25px 10px 30px 10px;
+ background:#fff;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx {
+ box-sizing:border-box;
+ max-width:1920px;
+ margin-left:auto;
+ margin-right:auto;
+ margin:0 auto
+}
+.wrapper-footer footer#footer-openedx:after {
+ content:"";
+ display:table;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx:after {
+ content:"";
+ display:table;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx p,
+.wrapper-footer footer#footer-openedx ol,
+.wrapper-footer footer#footer-openedx ul {
+ font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.wrapper-footer footer#footer-openedx p a,
+.wrapper-footer footer#footer-openedx ol a,
+.wrapper-footer footer#footer-openedx ul a {
+ font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.wrapper-footer footer#footer-openedx a {
+ transition:link-color 0.15s ease-in-out 0s,border 0.15s ease-in-out 0s;
+ border-bottom:none;
+ color:#3b85ff;
+ text-decoration:none !important
+}
+.wrapper-footer footer#footer-openedx a:hover,
+.wrapper-footer footer#footer-openedx a:focus,
+.wrapper-footer footer#footer-openedx a:active {
+ border-bottom:1px dotted #3b85ff
+}
+.wrapper-footer footer#footer-openedx .icon {
+ font-family:'FontAwesome';
+ font-style:normal
+}
+.wrapper-footer footer#footer-openedx .colophon {
+ float:left;
+ display:block;
+ margin-right:2.35765%;
+ width:65.88078%
+}
+.wrapper-footer footer#footer-openedx .colophon:last-child {
+ margin-right:0
+}
+@media screen and (min-width: 321px) and (max-width: 540px) {
+ .wrapper-footer footer#footer-openedx .colophon {
+  width:100%;
+  box-sizing:border-box
+ }
+}
+@media screen and (max-width: 320px) {
+ .wrapper-footer footer#footer-openedx .colophon {
+  width:100%;
+  box-sizing:border-box
+ }
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+ margin:5px 0 30px 0
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon:after {
+ content:"";
+ display:table;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+ float:left;
+ margin-right:15px
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+ color:#333
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:active {
+ color:#3b85ff
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li:last-child {
+ margin-right:0
+}
+.wrapper-footer footer#footer-openedx .colophon .colophon-about:after {
+ content:"";
+ display:table;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx .colophon .colophon-about img {
+ width:68px;
+ height:34px;
+ margin-right:0;
+ float:left
+}
+.wrapper-footer footer#footer-openedx .colophon .colophon-about p {
+ float:left;
+ width:74.10533%;
+ margin-left:20px;
+ padding-left:20px;
+ font-size:0.8125em;
+ background:transparent url("/static/images/bg-footer-divider.1aab2089decb.jpg") 0 0 no-repeat
+}
+.wrapper-footer footer#footer-openedx .references {
+ margin:-10px 0 0 0;
+ width:31.76157%;
+ display:inline-block
+}
+.wrapper-footer footer#footer-openedx .wrapper-logo {
+ margin:15px 0
+}
+.wrapper-footer footer#footer-openedx .wrapper-logo a {
+ display:inline-block
+}
+.wrapper-footer footer#footer-openedx .wrapper-logo a img {
+ height:42px
+}
+.wrapper-footer footer#footer-openedx .wrapper-logo a:hover {
+ border-bottom:0
+}
+.wrapper-footer footer#footer-openedx .copyright {
+ margin:-2px 0 8px 0;
+ font-size:0.6875em;
+ color:#767676;
+ text-align:left
+}
+.wrapper-footer footer#footer-openedx .nav-legal {
+ text-align:left
+}
+.wrapper-footer footer#footer-openedx .nav-legal:after {
+ content:"";
+ display:table;
+ clear:both
+}
+.wrapper-footer footer#footer-openedx .nav-legal li {
+ display:inline-block;
+ font-size:0.6875em
+}
+.wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child)::before {
+ margin-right:5px;
+ content:"-"
+}
+.wrapper-footer footer#footer-openedx .nav-social {
+ margin:0;
+ text-align:right
+}
+.wrapper-footer footer#footer-openedx .nav-social li {
+ display:inline-block
+}
+.wrapper-footer footer#footer-openedx .nav-social li:last-child {
+ margin-right:0
+}
+.wrapper-footer footer#footer-openedx .nav-social li a {
+ display:block
+}
+.wrapper-footer footer#footer-openedx .nav-social li a:hover,
+.wrapper-footer footer#footer-openedx .nav-social li a:focus,
+.wrapper-footer footer#footer-openedx .nav-social li a:active {
+ border:none
+}
+.wrapper-footer footer#footer-openedx .nav-social li img {
+ display:block
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+ float:left;
+ display:block;
+ margin-right:2.35765%;
+ width:31.76157%;
+ text-align:right;
+ vertical-align:bottom
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
+ margin-right:0
+}
+@media screen and (min-width: 321px) and (max-width: 540px) {
+ .wrapper-footer footer#footer-openedx .footer-about-openedx {
+  width:100%;
+  box-sizing:border-box
+ }
+}
+@media screen and (max-width: 320px) {
+ .wrapper-footer footer#footer-openedx .footer-about-openedx {
+  width:100%;
+  box-sizing:border-box
+ }
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx a {
+ float:right;
+ display:inline-block
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx a:hover {
+ border-bottom:none
+}
+.wrapper-footer footer#footer-openedx .footer-language-selector label[for=footer-language-select] {
+ display:inline-block;
+ cursor:initial
+}
+.wrapper-footer footer#footer-openedx .select-lang-button {
+ padding:5px;
+ color:#126f9a !important;
+ height:30px
+}
+.wrapper-footer footer#footer-openedx .select-lang-button:hover,
+.wrapper-footer footer#footer-openedx .select-lang-button:active,
+.wrapper-footer footer#footer-openedx .select-lang-button:focus {
+ background:#126f9a !important;
+ color:white !important
+}
+.wrapper-footer.edx-footer footer .copyright {
+ text-align:right
+}
+.wrapper-footer.edx-footer footer .nav-legal {
+ text-align:right
+}
+.view-register .wrapper-footer footer,
+.view-login .wrapper-footer footer,
+.view-passwordreset .wrapper-footer footer {
+ width:960px
+}
+.view-register .wrapper-footer footer .colophon-about img,
+.view-login .wrapper-footer footer .colophon-about img,
+.view-passwordreset .wrapper-footer footer .colophon-about img {
+ margin-top:30px
+}
