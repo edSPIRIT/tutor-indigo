@@ -8,7 +8,6 @@
   from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILITY_POLICY_PAGE
   from openedx.core.djangolib.markup import HTML, Text
 %>
-<% footer = get_footer(is_secure=is_secure) %>
 
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
@@ -43,7 +42,7 @@
           % if not hide_openedx_link:
             <div class="footer-about-openedx">
               <p>
-                <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+                <a href="https://open.edx.org/" rel="noopener" target="_blank">
                   <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png"> alt="${footer['openedx_link']['title']}" width="140" />
                 </a>
               </p>
@@ -89,7 +88,7 @@
       % if not hide_openedx_link:
       <div class="footer-about-openedx">
         <p>
-          <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+          <a href="https://open.edx.org/" rel="noopener" target="_blank">
             <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png"> alt="${footer['openedx_link']['title']}" width="140" />
           </a>
         </p>
