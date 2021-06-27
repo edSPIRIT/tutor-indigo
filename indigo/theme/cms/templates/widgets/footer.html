@@ -9,8 +9,6 @@
   from openedx.core.djangolib.markup import HTML, Text
 %>
 <% footer = get_footer(is_secure=is_secure) %>
-<%namespace name='static' file='static_content.html'/>
-
 
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
@@ -46,7 +44,7 @@
             <div class="footer-about-openedx">
               <p>
                 <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
-                  <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="140" />
+                  <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png"> alt="${footer['openedx_link']['title']}" width="140" />
                 </a>
               </p>
             </div>
@@ -92,7 +90,7 @@
       <div class="footer-about-openedx">
         <p>
           <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
-            <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="140" />
+            <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png"> alt="${footer['openedx_link']['title']}" width="140" />
           </a>
         </p>
       </div>
