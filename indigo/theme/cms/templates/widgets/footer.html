@@ -3,14 +3,14 @@
 <%!
   from django.urls import reverse
   from django.utils.translation import ugettext as _
-  from datetime import datetime
-  from django.conf import settings
-  import pytz
-  from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILITY_POLICY_PAGE
-  from openedx.core.djangolib.markup import HTML, Text
   from lms.djangoapps.branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+  from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILITY_POLICY_PAGE
+  from openedx.core.djangolib.markup import HTML, Text
 %>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
 
 % if uses_bootstrap:
   <div class="container-fluid wrapper-footer">
