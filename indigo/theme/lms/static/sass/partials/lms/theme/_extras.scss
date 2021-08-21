@@ -5,7 +5,8 @@ $content-padding-bottom: 10px;
 $header-height: 75px;
 $footer-height: 125.5px;
 
-body, body.view-profile {
+body,
+body.view-profile {
   min-height: initial;
   background-color: #fff;
 }
@@ -14,7 +15,8 @@ body, body.view-profile {
   border-radius: 0;
 }
 
-.btn, .global-header .nav-links .secondary .btn {
+.btn,
+.global-header .nav-links .secondary .btn {
   border-radius: 0;
 }
 
@@ -22,7 +24,13 @@ body, body.view-profile {
   font-family: $font-family-title;
 }
 
-h1, h2, h3, h1 span, h2 span, h3 span, .nav-item {
+h1,
+h2,
+h3,
+h1 span,
+h2 span,
+h3 span,
+.nav-item {
   font-family: $font-family-title;
 }
 
@@ -32,7 +40,10 @@ h1, h2, h3, h1 span, h2 span, h3 span, .nav-item {
     padding-bottom: $content-padding-bottom;
     margin-top: $header-height;
   }
-  min-height: calc(100vh - #{$header-height + $content-padding-top + $content-padding-bottom + $footer-height}); // sticky footer
+  min-height: calc(
+    100vh - #{$header-height + $content-padding-top + $content-padding-bottom +
+      $footer-height}
+  ); // sticky footer
 }
 
 ////////////////// Fonts
@@ -44,7 +55,7 @@ header.global-header {
     position: fixed;
     top: 0;
     z-index: 200; // necessary to keep the header on top of other elements
-    overflow: visible;  // fix for Safari
+    overflow: visible; // fix for Safari
   }
   //background-color: #4c61bf;
   box-shadow: none;
@@ -61,10 +72,10 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
 /////////////////// Sign in form
 
 .login-register .form-field {
-    // Hide "Sign in with your company or school link"
-    button.enterprise-login {
-        display: none;
-    }
+  // Hide "Sign in with your company or school link"
+  button.enterprise-login {
+    display: none;
+  }
 }
 
 /////////////////// Home page
@@ -89,11 +100,13 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
   text-align: center;
 }
 
-.animation-home-header-pop-up, .home > header .outer-wrapper {
+.animation-home-header-pop-up,
+.home > header .outer-wrapper {
   animation: none;
 }
 
-.highlighted-courses .courses, .find-courses .courses {
+.highlighted-courses .courses,
+.find-courses .courses {
   padding-top: 0;
 }
 
@@ -104,10 +117,10 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
 
 ////////////////// "View this course as staff/learner/..."
 nav.wrapper-preview-menu {
-    // It is necessary to specify `nav` in order to override the common higher priority rule
-    @include media-breakpoint-up(lg) {
-      margin-top: $header-height;
-    }
+  // It is necessary to specify `nav` in order to override the common higher priority rule
+  @include media-breakpoint-up(lg) {
+    margin-top: $header-height;
+  }
 }
 
 ////////////////// Course about page
@@ -144,9 +157,9 @@ nav.wrapper-preview-menu {
   }
 }
 
-
 /////////////////// Course search
-.find-courses, .university-profile {
+.find-courses,
+.university-profile {
   background-color: #fff;
 }
 
@@ -167,7 +180,9 @@ nav.wrapper-preview-menu {
   background-color: #fff;
 }
 
-.view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
+.view-profile
+  .wrapper-profile-section-container-one
+  .wrapper-profile-section-one {
   border: solid $primary;
   border-width: 5px 1px 1px 1px;
 }
@@ -189,20 +204,92 @@ nav.wrapper-preview-menu {
   padding: 25px 40px;
 
   .wrapper-logo {
-      display: none;
+    display: none;
   }
   .copyright {
-      display: none;
+    display: none;
   }
   .nav-legal ul {
-      display: inline-block;
+    display: inline-block;
   }
   footer#footer-openedx .footer-about-openedx {
-      a {
-          float: none;
-      }
-      p {
-          text-align: right;
-      }
+    a {
+      float: none;
+    }
+    p {
+      text-align: right;
+    }
+  }
+}
+
+// loader
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-bg {
+  background-color: #242F3F;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
   }
 }
