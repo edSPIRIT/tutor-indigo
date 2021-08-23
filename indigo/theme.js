@@ -1,5 +1,8 @@
 function footerHandler() {
   $.get("/avid_admin_console/api/instance_config/", function (data) {
+    if ($.isEmptyObject(data.results[0])) {
+      return;
+    }
     let result = data.results[0];
     $("nav[class='nav-colophon']").html(`
           <ol>
@@ -28,16 +31,26 @@ function footerHandler() {
 }
 
 function imageHandler() {
-  $("img[class='logo']").attr("src", "/media/admin_console/images/logo.png");
-  $("link[rel*='icon']").attr(
-    "href",
-    "/media/admin_console/images/favicon.ico"
-  );
+  $.get("/avid_admin_console/api/instance_config/", function (data) {
+    if ($.isEmptyObject(data.results[0])) {
+      return;
+    }
+    let result = data.results[0];
+    if (result.logo !== null) {
+      $("img[class='logo']").attr("src", result.logo);
+    }
+    if (result.favicon !== null) {
+      $("link[rel*='icon']").attr("href", result.favicon);
+    }
+  });
   return;
 }
 
 function customPageHandler() {
   $.get("/avid_admin_console/api/custom_pages/", function (data) {
+    if ($.isEmptyObject(data.results[0])) {
+      return;
+    }
     let result = data.results[0];
     let pathname = window.location.pathname;
     let paths = ["/about", "/contact", "/tos", "/privacy", "/donate", "/honor"];
@@ -55,6 +68,9 @@ function customPageHandler() {
 
 function orgNameWelcomeHandler() {
   $.get("/avid_admin_console/api/instance_config/", function (data) {
+    if ($.isEmptyObject(data.results[0])) {
+      return;
+    }
     let result = data.results[0];
     // set org name and welcome message in front page of lms
     $("div[class='title'] div[class='heading-group']").html(`
