@@ -249,6 +249,10 @@ nav.wrapper-preview-menu {
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
+// to solve the issue with courses on home page
+.home .courses-container .courses .courses-listing .courses-listing-item:nth-child(4n){
+  margin-right:2.35765%;
+}
 
 @keyframes loader {
   0% {
