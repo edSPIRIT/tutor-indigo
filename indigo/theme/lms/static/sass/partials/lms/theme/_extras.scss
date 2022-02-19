@@ -298,3 +298,8 @@ nav.wrapper-preview-menu {
     height: 0%;
   }
 }
+
+.wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child)::before {
+ margin-right:5px;
+ content:""
+}
