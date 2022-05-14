@@ -300,6 +300,19 @@ nav.wrapper-preview-menu {
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child)::before {
+ margin-right:15px;
+ content:" "
+}
+
+.wrapper-footer footer#footer-openedx .nav-legal li:first-child {
+ margin-right:15px;
+}
+
+.wrapper-footer footer#footer-openedx .nav-colophon li:not(:first-child)::before {
  margin-right:5px;
  content:" "
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li:last-child {
+ margin-right:15px;
 }
