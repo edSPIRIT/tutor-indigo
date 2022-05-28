@@ -57,7 +57,10 @@
           % if not hide_openedx_link:
             <div class="footer-about-openedx">
               <p>
-                <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+                <a id="edspirit-logo-replace-handle" class="edspirit-logo" href="https://edspirit.com" rel="noopener" target="_blank">
+                  <img src="/static/avid/images/edspirit-logo.png" alt="Powered by Edspirit" width="140">
+                </a>
+                <a id="edx-logo-remove-handle" href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
                   <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="140" />
                 </a>
               </p>
@@ -138,7 +141,10 @@
       % if not hide_openedx_link:
       <div class="footer-about-openedx">
         <p>
-          <a href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
+          <a id="edspirit-logo-replace-handle" class="edspirit-logo" href="https://edspirit.com" rel="noopener" target="_blank">
+            <img src="/static/avid/images/edspirit-logo.png" alt="Powered by Edspirit" width="140">
+          </a>
+          <a id="edx-logo-remove-handle" href="${footer['openedx_link']['url']}" rel="noopener" target="_blank">
             <img src="${static.url('images/openedx-logo.png')}" alt="${footer['openedx_link']['title']}" width="140" />
           </a>
         </p>
