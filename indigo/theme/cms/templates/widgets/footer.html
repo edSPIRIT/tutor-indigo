@@ -7,6 +7,8 @@
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
   from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILITY_POLICY_PAGE
   from openedx.core.djangolib.markup import HTML, Text
+  from django.utils.translation import get_language_bidi
+
 %>
 
 % if uses_bootstrap:
@@ -94,7 +96,12 @@
           <a id="edx-logo-remove-handle" href="https://open.edx.org/" rel="noopener" target="_blank">
             <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png" alt="open.edx.org" width="140" />
           </a>
-          <a id="edspirit-logo-replace-handle" class="edspirit-logo" href="https://edspirit.com" rel="noopener" target="_blank">
+          <a id="edspirit-logo-replace-handle"
+            % if get_language_bidi():
+            class="edspirit-logo-rtl"
+            % else:
+            class="edspirit-logo"
+            % endif            href="https://edspirit.com" rel="noopener" target="_blank">
             <img src="/static/studio/avid/images/edspirit-logo.png" alt="Powered by Edspirit" width="140">
           </a>
         </p>
