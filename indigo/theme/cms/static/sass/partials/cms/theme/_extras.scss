@@ -1019,7 +1019,376 @@ html[lang=ar] .view-container .content-supplementary .bit-publishing .wrapper-vi
 html[lang=ar] .view-container .content-supplementary .bit-publishing .wrapper-visibility .note-visibility,
 html[lang=ar] .view-container .content-supplementary label,
 html[lang=ar] .area-subheader .subtitle,
-html[lang=ar] .view-team .user-list .user-item .flag-role {
+html[lang=ar] .view-team .user-list .user-item .flag-role,
+html[lang=ar] body.error h1,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-title
+  a,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-title
+  span,
+html[lang=ar] .find-courses .wrapper-search-context .search-status-label,
+html[lang=ar] .pagination .page-divider,
+html[lang=ar] .verification-process .carousel .view > .title,
+html[lang=ar] .verification-process .content-main > .title,
+html[lang=ar] .register.is-not-verified.step-confirmation .view .title,
+html[lang=ar] .view-survey .header-survey .title,
+html[lang=ar] .wrapper-account-settings .wrapper-header .header-title,
+html[lang=ar] .login-register-content h1,
+html[lang=ar] .verification-process .reverify-success-step .title,
+html[lang=ar] .reverify-blocked .title,
+html[lang=ar] .confirm-enrollment .title,
+html[lang=ar] .confirm-enrollment .enrollment-details .course-title h1,
+html[lang=ar] .shopping-cart h1,
+html[lang=ar] .shopping-cart .user-data .data-input .course-display-name,
+html[lang=ar] .shopping-cart .user-data .data-input .course-display-dates,
+html[lang=ar] .shopping-cart .user-data .data-input h1,
+html[lang=ar] .wrapper-authorize h1,
+html[lang=ar] .financial-assistance-wrapper h1,
+html[lang=ar] #api-access-wrapper h1,
+html[lang=ar] .view-profile .profile-header .header,
+html[lang=ar]
+  .view-profile
+  .wrapper-profile-section-container-one
+  .wrapper-profile-section-one
+  .profile-section-one-fields
+  > .u-field:first-child,
+html[lang=ar] .home > header .title .course-search .search-input,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .wrapper-header-courses
+  .header-courses,
+html[lang=ar] .dashboard-banner .wrapper-msg .msg.title,
+html[lang=ar] .view-survey .header-survey .course-name,
+html[lang=ar] .view-survey .message.submission-error .message-title,
+html[lang=ar] .account-settings-sections .section-header,
+html[lang=ar] .login-register .status .message-title,
+html[lang=ar]
+  .financial-assistance-wrapper
+  .financial-assistance-form
+  .status
+  .message-title,
+html[lang=ar] .verification-process .title,
+html[lang=ar] .verification-process .page-header .title .sts-label,
+html[lang=ar] .verification-process .page-header .title .sts-course-org,
+html[lang=ar] .verification-process .page-header .title .sts-course-number,
+html[lang=ar] .verification-process .page-header .title .sts-course-name,
+html[lang=ar] .verification-process.step-select-track .register-choice .title,
+html[lang=ar] .verification-process.step-requirements .list-reqs .req .title,
+html[lang=ar]
+  .verification-process.step-requirements
+  .list-reqs
+  .req-activate
+  .title,
+html[lang=ar] .confirm-enrollment .enrollment-details .sub-title,
+html[lang=ar] .shopping-cart .billing-data h3,
+html[lang=ar] .shopping-cart .pattern h2,
+html[lang=ar]
+  .shopping-cart
+  .pattern
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=ar]
+  .home
+  > header
+  .title
+  > .heading-group
+  .shopping-cart
+  .pattern
+  p,
+html[lang=ar] .shopping-cart .pattern section.outside-app h1,
+html[lang=ar] section.outside-app .shopping-cart .pattern h1,
+html[lang=ar] .empty-cart h2,
+html[lang=ar] .empty-cart .home > header .title > .heading-group p,
+html[lang=ar] .home > header .title > .heading-group .empty-cart p,
+html[lang=ar] .empty-cart section.outside-app h1,
+html[lang=ar] section.outside-app .empty-cart h1,
+html[lang=ar] #api-access-wrapper h2,
+html[lang=ar] #api-access-wrapper .home > header .title > .heading-group p,
+html[lang=ar] .home > header .title > .heading-group #api-access-wrapper p,
+html[lang=ar] #api-access-wrapper section.outside-app h1,
+html[lang=ar] section.outside-app #api-access-wrapper h1,
+html[lang=ar] .certificate-card .card-title,
+html[lang=ar] .dashboard-search-results .search-info h2,
+html[lang=ar]
+  .dashboard-search-results
+  .search-info
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=ar]
+  .home
+  > header
+  .title
+  > .heading-group
+  .dashboard-search-results
+  .search-info
+  p,
+html[lang=ar] .dashboard-search-results .search-info section.outside-app h1,
+html[lang=ar] section.outside-app .dashboard-search-results .search-info h1,
+html[lang=ar] .wrapper-msg .msg-content .title,
+html[lang=ar] .verification-process .carousel .requirements .title,
+html[lang=ar]
+  .verification-process
+  .carousel
+  .requirements
+  .requirement
+  .title,
+html[lang=ar]
+  .verification-process
+  .carousel
+  .wrapper-task
+  .wrapper-help
+  .help
+  .title,
+html[lang=ar]
+  .verification-process
+  .carousel
+  #wrapper-review
+  .review-task
+  > .title,
+html[lang=ar] .verification-process .list-faq .faq-question,
+html[lang=ar]
+  .verification-process.step-confirmation
+  .list-info
+  .info-item
+  > .title,
+html[lang=ar] .verification-process .help-item .title,
+html[lang=ar] .verification-process.step-select-track .help-register .title,
+html[lang=ar]
+  .verification-process.step-select-track
+  .field-certificate-contribution
+  .label,
+html[lang=ar]
+  .verification-process.step-review
+  .nav-wizard
+  .prompt-verify
+  .title,
+html[lang=ar] .wrapper-messages-primary .message .message-title,
+html[lang=ar] .wrapper-messages-primary .message .message-copy .title,
+html[lang=ar] .find-courses .search-facets .header-search-facets,
+html[lang=ar] .find-courses .search-facets .header-facet,
+html[lang=ar] .login-register-content h3,
+html[lang=ar] .verification-process .wrapper-msg .msg-content .title,
+html[lang=ar] .shopping-cart .user-data .data-input h3,
+html[lang=ar] .shopping-cart .user-data .data-input h3 span,
+html[lang=ar]
+  .shopping-cart
+  .user-data
+  .data-input
+  .course-registration-title,
+html[lang=ar] .shopping-cart .user-data .data-input .course-dates-title,
+html[lang=ar] .shopping-cart h3,
+html[lang=ar]
+  .enrollment-modal-wrapper.is-shown
+  .enrollment-modal
+  .enrollment-change-title,
+html[lang=ar] .financial-assistance-wrapper h2,
+html[lang=ar]
+  .financial-assistance-wrapper
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=ar]
+  .home
+  > header
+  .title
+  > .heading-group
+  .financial-assistance-wrapper
+  p,
+html[lang=ar] .financial-assistance-wrapper section.outside-app h1,
+html[lang=ar] section.outside-app .financial-assistance-wrapper h1,
+html[lang=ar] .certificate-card .card-supertitle,
+html[lang=ar] .view-profile .profile-header .subheader,
+html[lang=ar]
+  .view-profile
+  .wrapper-profile-section-container-two
+  .u-field-title,
+html[lang=ar] .msg__title,
+html[lang=ar]
+  .verification-process
+  .carousel
+  #wrapper-review
+  .review-task-photos
+  .wrapper-photos
+  .help-tips
+  .title,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  [class*="info-"],
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  .info-date-block-container
+  .info-date-block,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  .info-date-block-container
+  .change-session,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .actions-dropdown
+  .actions-item,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .actions-dropdown
+  .actions-item,
+html[lang=ar]
+  .entitlement-actions-wrapper
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .entitlement-actions-dropdown
+  .actions-item,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .actions-item,
+html[lang=ar]
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .actions-dropdown
+  .entitlement-actions-item,
+.entitlement-actions-wrapper
+  html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .entitlement-actions-item,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .entitlement-actions-item,
+html[lang=ar] .view-survey .bit .title,
+html[lang=ar]
+  .verification-process
+  .wrapper-report
+  .report
+  thead
+  th[scope="col"],
+html[lang=ar]
+  .verification-process
+  .progress
+  .progress-step
+  .wrapper-step-number
+  .step-number,
+html[lang=ar] .verification-process .progress .progress-step .step-name,
+html[lang=ar] .enrollment-results th,
+html[lang=ar] .manage-user-results th,
+html[lang=ar] .fb-enrollments-results th,
+html[lang=ar] .notification .copy .title,
+html[lang=ar] .alert:not(.pattern-library-shim) .copy .title,
+html[lang=ar] .nav-utilities .action-toggle-message,
+html[lang=ar] .view-survey .header-survey .course-org,
+html[lang=ar] .view-survey .header-survey .course-number,
+html[lang=ar] .certificate-card .card-text,
+html[lang=ar]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-image
+  .sts-enrollment
+  .sts-enrollment-value,
+html[lang=ar]
+  .verification-process
+  .page-header
+  .title
+  .sts-track
+  .sts-track-value,
+html[lang=ar] .view-survey .header-survey .course-info,
+html[lang=ar] .verification-process h1,
+html[lang=ar] .verification-process h2,
+html[lang=ar] .verification-process .home > header .title > .heading-group p,
+html[lang=ar] .home > header .title > .heading-group .verification-process p,
+html[lang=ar] .verification-process section.outside-app h1,
+html[lang=ar] section.outside-app .verification-process h1,
+html[lang=ar] .verification-process h3,
+html[lang=ar] .verification-process h4,
+html[lang=ar] .verification-process h5,
+.verification-process h6 {
  font-family: NotoSansArabic !important;
 }
 
@@ -1159,6 +1528,375 @@ html[lang=fa] .view-container .content-supplementary .bit-publishing .wrapper-vi
 html[lang=fa] .view-container .content-supplementary .bit-publishing .wrapper-visibility .note-visibility,
 html[lang=fa] .view-container .content-supplementary label,
 html[lang=fa] .area-subheader .subtitle,
-html[lang=fa] .view-team .user-list .user-item .flag-role {
+html[lang=fa] .view-team .user-list .user-item .flag-role,
+html[lang=fa] body.error h1,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-title
+  a,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-title
+  span,
+html[lang=fa] .find-courses .wrapper-search-context .search-status-label,
+html[lang=fa] .pagination .page-divider,
+html[lang=fa] .verification-process .carousel .view > .title,
+html[lang=fa] .verification-process .content-main > .title,
+html[lang=fa] .register.is-not-verified.step-confirmation .view .title,
+html[lang=fa] .view-survey .header-survey .title,
+html[lang=fa] .wrapper-account-settings .wrapper-header .header-title,
+html[lang=fa] .login-register-content h1,
+html[lang=fa] .verification-process .reverify-success-step .title,
+html[lang=fa] .reverify-blocked .title,
+html[lang=fa] .confirm-enrollment .title,
+html[lang=fa] .confirm-enrollment .enrollment-details .course-title h1,
+html[lang=fa] .shopping-cart h1,
+html[lang=fa] .shopping-cart .user-data .data-input .course-display-name,
+html[lang=fa] .shopping-cart .user-data .data-input .course-display-dates,
+html[lang=fa] .shopping-cart .user-data .data-input h1,
+html[lang=fa] .wrapper-authorize h1,
+html[lang=fa] .financial-assistance-wrapper h1,
+html[lang=fa] #api-access-wrapper h1,
+html[lang=fa] .view-profile .profile-header .header,
+html[lang=fa]
+  .view-profile
+  .wrapper-profile-section-container-one
+  .wrapper-profile-section-one
+  .profile-section-one-fields
+  > .u-field:first-child,
+html[lang=fa] .home > header .title .course-search .search-input,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .wrapper-header-courses
+  .header-courses,
+html[lang=fa] .dashboard-banner .wrapper-msg .msg.title,
+html[lang=fa] .view-survey .header-survey .course-name,
+html[lang=fa] .view-survey .message.submission-error .message-title,
+html[lang=fa] .account-settings-sections .section-header,
+html[lang=fa] .login-register .status .message-title,
+html[lang=fa]
+  .financial-assistance-wrapper
+  .financial-assistance-form
+  .status
+  .message-title,
+html[lang=fa] .verification-process .title,
+html[lang=fa] .verification-process .page-header .title .sts-label,
+html[lang=fa] .verification-process .page-header .title .sts-course-org,
+html[lang=fa] .verification-process .page-header .title .sts-course-number,
+html[lang=fa] .verification-process .page-header .title .sts-course-name,
+html[lang=fa] .verification-process.step-select-track .register-choice .title,
+html[lang=fa] .verification-process.step-requirements .list-reqs .req .title,
+html[lang=fa]
+  .verification-process.step-requirements
+  .list-reqs
+  .req-activate
+  .title,
+html[lang=fa] .confirm-enrollment .enrollment-details .sub-title,
+html[lang=fa] .shopping-cart .billing-data h3,
+html[lang=fa] .shopping-cart .pattern h2,
+html[lang=fa]
+  .shopping-cart
+  .pattern
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=fa]
+  .home
+  > header
+  .title
+  > .heading-group
+  .shopping-cart
+  .pattern
+  p,
+html[lang=fa] .shopping-cart .pattern section.outside-app h1,
+html[lang=fa] section.outside-app .shopping-cart .pattern h1,
+html[lang=fa] .empty-cart h2,
+html[lang=fa] .empty-cart .home > header .title > .heading-group p,
+html[lang=fa] .home > header .title > .heading-group .empty-cart p,
+html[lang=fa] .empty-cart section.outside-app h1,
+html[lang=fa] section.outside-app .empty-cart h1,
+html[lang=fa] #api-access-wrapper h2,
+html[lang=fa] #api-access-wrapper .home > header .title > .heading-group p,
+html[lang=fa] .home > header .title > .heading-group #api-access-wrapper p,
+html[lang=fa] #api-access-wrapper section.outside-app h1,
+html[lang=fa] section.outside-app #api-access-wrapper h1,
+html[lang=fa] .certificate-card .card-title,
+html[lang=fa] .dashboard-search-results .search-info h2,
+html[lang=fa]
+  .dashboard-search-results
+  .search-info
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=fa]
+  .home
+  > header
+  .title
+  > .heading-group
+  .dashboard-search-results
+  .search-info
+  p,
+html[lang=fa] .dashboard-search-results .search-info section.outside-app h1,
+html[lang=fa] section.outside-app .dashboard-search-results .search-info h1,
+html[lang=fa] .wrapper-msg .msg-content .title,
+html[lang=fa] .verification-process .carousel .requirements .title,
+html[lang=fa]
+  .verification-process
+  .carousel
+  .requirements
+  .requirement
+  .title,
+html[lang=fa]
+  .verification-process
+  .carousel
+  .wrapper-task
+  .wrapper-help
+  .help
+  .title,
+html[lang=fa]
+  .verification-process
+  .carousel
+  #wrapper-review
+  .review-task
+  > .title,
+html[lang=fa] .verification-process .list-faq .faq-question,
+html[lang=fa]
+  .verification-process.step-confirmation
+  .list-info
+  .info-item
+  > .title,
+html[lang=fa] .verification-process .help-item .title,
+html[lang=fa] .verification-process.step-select-track .help-register .title,
+html[lang=fa]
+  .verification-process.step-select-track
+  .field-certificate-contribution
+  .label,
+html[lang=fa]
+  .verification-process.step-review
+  .nav-wizard
+  .prompt-verify
+  .title,
+html[lang=fa] .wrapper-messages-primary .message .message-title,
+html[lang=fa] .wrapper-messages-primary .message .message-copy .title,
+html[lang=fa] .find-courses .search-facets .header-search-facets,
+html[lang=fa] .find-courses .search-facets .header-facet,
+html[lang=fa] .login-register-content h3,
+html[lang=fa] .verification-process .wrapper-msg .msg-content .title,
+html[lang=fa] .shopping-cart .user-data .data-input h3,
+html[lang=fa] .shopping-cart .user-data .data-input h3 span,
+html[lang=fa]
+  .shopping-cart
+  .user-data
+  .data-input
+  .course-registration-title,
+html[lang=fa] .shopping-cart .user-data .data-input .course-dates-title,
+html[lang=fa] .shopping-cart h3,
+html[lang=fa]
+  .enrollment-modal-wrapper.is-shown
+  .enrollment-modal
+  .enrollment-change-title,
+html[lang=fa] .financial-assistance-wrapper h2,
+html[lang=fa]
+  .financial-assistance-wrapper
+  .home
+  > header
+  .title
+  > .heading-group
+  p,
+html[lang=fa]
+  .home
+  > header
+  .title
+  > .heading-group
+  .financial-assistance-wrapper
+  p,
+html[lang=fa] .financial-assistance-wrapper section.outside-app h1,
+html[lang=fa] section.outside-app .financial-assistance-wrapper h1,
+html[lang=fa] .certificate-card .card-supertitle,
+html[lang=fa] .view-profile .profile-header .subheader,
+html[lang=fa]
+  .view-profile
+  .wrapper-profile-section-container-two
+  .u-field-title,
+html[lang=fa] .msg__title,
+html[lang=fa]
+  .verification-process
+  .carousel
+  #wrapper-review
+  .review-task-photos
+  .wrapper-photos
+  .help-tips
+  .title,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  [class*="info-"],
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  .info-date-block-container
+  .info-date-block,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-details
+  .course-info
+  .info-date-block-container
+  .change-session,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .actions-dropdown
+  .actions-item,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .actions-dropdown
+  .actions-item,
+html[lang=fa]
+  .entitlement-actions-wrapper
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .entitlement-actions-dropdown
+  .actions-item,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .actions-item,
+html[lang=fa]
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .actions-dropdown
+  .entitlement-actions-item,
+.entitlement-actions-wrapper
+  html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .wrapper-action-more
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .entitlement-actions-item,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .course-actions
+  .entitlement-actions-wrapper
+  .entitlement-actions-dropdown
+  .entitlement-actions-dropdown-list
+  .entitlement-actions-item,
+html[lang=fa] .view-survey .bit .title,
+html[lang=fa]
+  .verification-process
+  .wrapper-report
+  .report
+  thead
+  th[scope="col"],
+html[lang=fa]
+  .verification-process
+  .progress
+  .progress-step
+  .wrapper-step-number
+  .step-number,
+html[lang=fa] .verification-process .progress .progress-step .step-name,
+html[lang=fa] .enrollment-results th,
+html[lang=fa] .manage-user-results th,
+html[lang=fa] .fb-enrollments-results th,
+html[lang=fa] .notification .copy .title,
+html[lang=fa] .alert:not(.pattern-library-shim) .copy .title,
+html[lang=fa] .nav-utilities .action-toggle-message,
+html[lang=fa] .view-survey .header-survey .course-org,
+html[lang=fa] .view-survey .header-survey .course-number,
+html[lang=fa] .certificate-card .card-text,
+html[lang=fa]
+  .dashboard
+  .main-container
+  .my-courses
+  .course
+  .details
+  .wrapper-course-image
+  .sts-enrollment
+  .sts-enrollment-value,
+html[lang=fa]
+  .verification-process
+  .page-header
+  .title
+  .sts-track
+  .sts-track-value,
+html[lang=fa] .view-survey .header-survey .course-info,
+html[lang=fa] .verification-process h1,
+html[lang=fa] .verification-process h2,
+html[lang=fa] .verification-process .home > header .title > .heading-group p,
+html[lang=fa] .home > header .title > .heading-group .verification-process p,
+html[lang=fa] .verification-process section.outside-app h1,
+html[lang=fa] section.outside-app .verification-process h1,
+html[lang=fa] .verification-process h3,
+html[lang=fa] .verification-process h4,
+html[lang=fa] .verification-process h5,
+.verification-process h6 {
  font-family: IRANSans !important;
 }
