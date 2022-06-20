@@ -486,21 +486,25 @@ nav.wrapper-preview-menu {
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child)::before {
- margin-right:15px;
+ margin-right:0.5rem;
+ margin-left:0.5rem;
  content:" "
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal li:first-child {
- margin-right:15px;
+ margin-right:0.5rem;
+ margin-left:0.5rem;
 }
 
 .wrapper-footer footer#footer-openedx .nav-colophon li:not(:first-child)::before {
- margin-right:5px;
+ margin-right:0.5rem;
+ margin-left:0.5rem;
  content:" "
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li:last-child {
- margin-right:15px;
+ margin-right:0.5rem;
+ margin-left:0.5rem;
 }
 
 .edspirit-logo{
