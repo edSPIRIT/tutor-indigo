@@ -113,7 +113,7 @@ from six import string_types
             else:
               href_class = "register"
           %>
-          % if request.user.is_active:
+          % if request.user.is_anonymous or request.user.is_active:
           <a href="${reg_href}" class="${href_class}">
             ${_("Enroll Now")}
           </a>
