@@ -36,7 +36,11 @@
       <section class="courses-container">
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
+          % if request.user.is_active:
           <div id="discovery-message" class="search-status-label"></div>
+          % else
+          <div id="" class="search-status-label"></div>
+          % endif
           <form class="wrapper-search-input">
             <label for="discovery-input" class="sr">${_('Search for a course')}</label>
             <input id="discovery-input" class="discovery-input" placeholder="${_('Search for a course')}" type="text"/>
@@ -57,20 +61,20 @@
         % endif
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing courses-list">
             % if request.user.is_active:
-            %for course in courses:
-            <li class="courses-listing-item">
-              <%include file="../course.html" args="course=course" />
-            </li>
-            %endfor
+            <ul class="courses-listing courses-list">
+                %for course in courses:
+                <li class="courses-listing-item">
+                <%include file="../course.html" args="course=course" />
+                </li>
+                %endfor
+            </ul>
             % else:
             <div class="empty-dashboard-message">
                 <p>${_("Activate your account!")}</p>
                 <p class="custom-message">${_("Check your %s inbox for an account activation link from %s") %(request.user.email,platform_name)}</p>
             </div>
             % endif
-          </ul>
         </div>
 
 
