@@ -36,7 +36,7 @@
       <section class="courses-container">
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
-          % if request.user.is_active:
+          % if request.user.is_anonymous or request.user.is_active:
           <div id="discovery-message" class="search-status-label"></div>
           % else:
           <div id="" class="search-status-label"></div>
@@ -61,7 +61,7 @@
         % endif
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-            % if request.user.is_active:
+            % if request.user.is_anonymous or request.user.is_active:
             <ul class="courses-listing courses-list">
                 %for course in courses:
                 <li class="courses-listing-item">
