@@ -193,7 +193,7 @@ from openedx.core.release import RELEASE_LINE
     </%block>
     <%include file="widgets/segment-io-footer.html" />
     <div class="modal-cover"></div>
-    
+
     ## js from admin console 
     <script type="text/javascript" src="/static/assets/js/studio-theme.js"></script>
     <script type="text/javascript">
@@ -201,11 +201,11 @@ from openedx.core.release import RELEASE_LINE
       const announcementWrapper = document.querySelector('.announcement-wrapper');
       const wrapperHeader = document.querySelector('.wrapper-header');
       // Add a function to adjust the top attribute of the wrapper header and hide the announcement wrapper
-      
+
       function hideAnnouncementWrapper() {
         announcementWrapper.style.display = 'none';
         wrapperHeader.style.marginTop = '0';
-      
+
       }
       // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the wrapper header
       closeIcon.onclick = hideAnnouncementWrapper;
@@ -214,20 +214,23 @@ from openedx.core.release import RELEASE_LINE
       window.onload = function() {
         if (announcementWrapper.style.display !== 'none') {
           wrapperHeader.style.marginTop = '60px';
-      } 
+      }
       };
-            function openNewWebsite() {
+      function openNewWebsite() {
         // Get the current hostname
-        const hostname = window.location.hostname;
+        let hostname;
 
-        // Extract the domain name from the hostname
-        const domainName = hostname.split('.').slice(-3).join('.');
+        if (window.location.host.startsWith("studio.")) {
+          hostname = window.location.host.split(".").slice(1).join(".");
+        } else {
+          hostname = window.location.host;
+        }
 
         // Create a new URL with the modified hostname and path
-        const newUrl = new URL('https://apps.' + domainName + '/homepage');
+        const newUrl = new URL("https://apps." + hostname + "/homepage");
 
         // Open the new URL in a new tab
-        window.open(newUrl.toString(), '_blank');
+        window.open(newUrl.toString(), "_blank");
       }
   </script>
   </body>
