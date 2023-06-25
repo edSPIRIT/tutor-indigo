@@ -58,9 +58,50 @@ h3 span,
       $footer-height}
   ); // sticky footer
 }
+////announcement-wrapper
+.announcement-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 201;
+  width: 100%;
+  .inside-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    background-color: #313131;
+    height: 60px;
+    color: #fff;
+    font-size: 16px;
+  }
 
-
-
+  .close {
+    position: absolute;
+    left: 24px;
+    top: 18px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .info {
+    color: #f0cc00;
+    margin-right: 6px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    .open-website {
+      color: #3b85ff;
+      border: 1px solid #3b85ff;
+      background-color: transparent;
+      background-image: unset;
+      box-shadow: unset;
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-left: 6px;
+      font-size: 16px;
+    }
+  }
+}
 /////////////////// Register/Sign in header
 header.global-header {
   @include media-breakpoint-up(lg) {
@@ -312,31 +353,34 @@ nav.wrapper-preview-menu {
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child)::before {
- margin-right:0.5rem;
- margin-left:0.5rem;
- content:" "
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  content: " ";
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal li:first-child {
- margin-right:0.5rem;
- margin-left:0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.wrapper-footer footer#footer-openedx .nav-colophon li:not(:first-child)::before {
- margin-right:0.5rem;
- margin-left:0.5rem;
- content:" "
+.wrapper-footer
+  footer#footer-openedx
+  .nav-colophon
+  li:not(:first-child)::before {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  content: " ";
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li:last-child {
- margin-right:0.5rem;
- margin-left:0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.edspirit-logo{
- margin-right:2rem;
+.edspirit-logo {
+  margin-right: 2rem;
 }
 
-.edspirit-logo-rtl{
- margin-left: 2rem;
+.edspirit-logo-rtl {
+  margin-left: 2rem;
 }
