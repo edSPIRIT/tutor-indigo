@@ -88,20 +88,7 @@ from openedx.core.release import RELEASE_LINE
     <div class="loader-bg">
     <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    <div class="announcement-wrapper" id="announcement-wrapper">
-      <div class="inside-wrapper">
-        <img id="close-icon" src="/static/studio/indigo/images/x.png" alt="close" class="close">
-        <div>
-        <img id="info-icon" src="/static/studio/indigo/images/Info-icon.png" alt="info" class="info">
-          <p>
-            ${_("Please use the new website version, for an enhanced experience with more features and improved UI.")}
-          </p>
-          <a onclick="openNewWebsite(); return false;">
-            <button type="button" class="open-website">${_("Open New Website")}</button>
-          </a>
-        </div>
-      </div>
-    </div>
+
     <%block name="view_notes"></%block>
 
     <a class="nav-skip" href="#main">${_("Skip to main content")}</a>
@@ -193,45 +180,8 @@ from openedx.core.release import RELEASE_LINE
     </%block>
     <%include file="widgets/segment-io-footer.html" />
     <div class="modal-cover"></div>
-
+    
     ## js from admin console 
     <script type="text/javascript" src="/static/assets/js/studio-theme.js"></script>
-    <script type="text/javascript">
-      const closeIcon = document.getElementById('close-icon');
-      const announcementWrapper = document.querySelector('.announcement-wrapper');
-      const wrapperHeader = document.querySelector('.wrapper-header');
-      // Add a function to adjust the top attribute of the wrapper header and hide the announcement wrapper
-
-      function hideAnnouncementWrapper() {
-        announcementWrapper.style.display = 'none';
-        wrapperHeader.style.marginTop = '0';
-
-      }
-      // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the wrapper header
-      closeIcon.onclick = hideAnnouncementWrapper;
-
-      // Call the function when the page loads to adjust the global header
-      window.onload = function() {
-        if (announcementWrapper.style.display !== 'none') {
-          wrapperHeader.style.marginTop = '60px';
-      }
-      };
-      function openNewWebsite() {
-        // Get the current hostname
-        let hostname;
-
-        if (window.location.host.startsWith("studio.")) {
-          hostname = window.location.host.split(".").slice(1).join(".");
-        } else {
-          hostname = window.location.host;
-        }
-
-        // Create a new URL with the modified hostname and path
-        const newUrl = new URL("https://apps." + hostname + "/homepage");
-
-        // Open the new URL in a new tab
-        window.open(newUrl.toString(), "_blank");
-      }
-  </script>
   </body>
 </html>

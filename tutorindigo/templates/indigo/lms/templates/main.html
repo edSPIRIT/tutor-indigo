@@ -260,19 +260,16 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
   };
       function openNewWebsite() {
         // Get the current hostname
-        let hostname;
+        const hostname = window.location.hostname;
 
-        if (window.location.host.startsWith("studio.")) {
-          hostname = window.location.host.split(".").slice(1).join(".");
-        } else {
-          hostname = window.location.host;
-        }
+        // Add the prefix and postfix to the domain name
+        const domainName = 'apps.' + hostname;
 
         // Create a new URL with the modified hostname and path
-        const newUrl = new URL("https://apps." + hostname + "/homepage");
+        const newUrl = new URL('https://' + domainName + '/homepage');
 
         // Open the new URL in a new tab
-        window.open(newUrl.toString(), "_blank");
+        window.location.href = newUrl.toString();
       }
 </script> 
   <div id="lean_overlay"></div>
