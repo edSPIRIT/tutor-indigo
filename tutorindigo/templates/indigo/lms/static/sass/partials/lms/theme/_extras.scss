@@ -89,6 +89,9 @@ h3 span,
   .info-wrapper {
     display: flex;
     align-items: center;
+    p {
+      line-height: 24px;
+    }
   }
   .context-wrapper {
     padding: 10px 10px 10px 60px;
@@ -97,8 +100,8 @@ h3 span,
     width: 100%;
     justify-content: center;
     .open-website {
-      color: #3b85ff;
-      border: 1px solid #3b85ff;
+      color: #ff8057;
+      border: 1px solid #ff8057;
       background-color: transparent;
       background-image: unset;
       box-shadow: unset;
@@ -107,6 +110,7 @@ h3 span,
       margin-inline: 6px;
       font-size: 16px;
       font-weight: 700;
+      width: max-content;
     }
   }
 }
@@ -129,7 +133,6 @@ h3 span,
     .open-website {
       border: unset !important;
       font-size: 14px !important;
-      width: max-content;
     }
     .close {
       width: 18px;
@@ -138,14 +141,19 @@ h3 span,
     .info {
       display: none;
     }
+    p {
+      text-align: left;
+    }
   }
 }
 @media (max-width: 576px) {
   .announcement-wrapper {
     .context-wrapper {
       p {
-        max-width: 200px;
         line-height: 20px;
+      }
+      .open-website {
+        width: unset;
       }
     }
   }
