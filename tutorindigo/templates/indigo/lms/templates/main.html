@@ -243,16 +243,25 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
   const globalHeader = document.querySelector('.global-header');
   const contentWrapper = document.querySelector('.content-wrapper');
 
+  const cookieName = 'hide_announcement';
+  const expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 14); // Set cookie to expire in 14 days
   // Add a function to adjust the top attribute of the global header and hide the announcement wrapper
   function hideAnnouncementWrapper() {
     announcementWrapper.style.display = 'none';
     globalHeader.style.top = '0';
     contentWrapper.style.marginTop='75px';
+    document.cookie = cookieName + '=true; expires=' + expirationDate.toUTCString() + '; path=/';
   }
 
   // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
   closeIcon.onclick = hideAnnouncementWrapper;
 
+  if (document.cookie.includes(cookieName)) {
+    announcementWrapper.style.display = 'none';
+    globalHeader.style.top = '0';
+    contentWrapper.style.marginTop='75px';
+  }
   // Call the function when the page loads to adjust the global header
   window.onload = function() {
     if (announcementWrapper.style.display !== 'none') {
