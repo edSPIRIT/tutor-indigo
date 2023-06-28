@@ -189,22 +189,6 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
 % endif
     <%block name="skip_links"/>
     <a class="nav-skip sr-only sr-only-focusable" href="#main">${_("Skip to main content")}</a>
-    <div class="announcement-wrapper" id="announcement-wrapper">
-      <div class="inside-wrapper">
-        <img id="close-icon" src="/static/indigo/images/x.png" alt="close" class="close">
-        <div class="context-wrapper">
-          <div class="info-wrapper">
-            <img id="info-icon" src="/static/indigo/images/Info-icon.png" alt="info" class="info">
-            <p>
-            ${_("We're excited to announce the beta release of our new web site. Please take a moment to explore, and share your feedback.")}
-            </p>
-          </div>
-          <a onclick="openNewWebsite(); return false;">
-            <button type="button" class="open-website">${_("Open New Website")}</button>
-          </a>
-        </div>
-      </div>
-    </div>
     % if not disable_header:
         <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
         <%include file="/preview_menu.html" />
@@ -237,52 +221,103 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
   <script type="text/javascript" src="${static.url('js/src/jquery_extend_patch.js')}"></script>
 <script type="text/javascript">
-  // Get a reference to the close icon button, announcement wrapper, and global header
-  const closeIcon = document.getElementById('close-icon');
-  const announcementWrapper = document.querySelector('.announcement-wrapper');
-  const globalHeader = document.querySelector('.global-header');
-  const contentWrapper = document.querySelector('.content-wrapper');
+    window.onload = function() {
+      // Create the HTML elements
+      const announcementWrapper = document.createElement("div");
+      announcementWrapper.setAttribute("class", "announcement-wrapper");
+      announcementWrapper.setAttribute("id", "announcement-wrapper");
 
-  const cookieName = 'hide_announcement';
-  const expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 14); // Set cookie to expire in 14 days
-  // Add a function to adjust the top attribute of the global header and hide the announcement wrapper
-  function hideAnnouncementWrapper() {
-    announcementWrapper.style.display = 'none';
-    globalHeader.style.top = '0';
-    contentWrapper.style.marginTop= '75px';
-    document.cookie = cookieName + '=true; expires=' + expirationDate.toUTCString() + '; path=/';
-  }
+      const insideWrapper = document.createElement("div");
+      insideWrapper.setAttribute("class", "inside-wrapper");
 
-  // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
-  closeIcon.onclick = hideAnnouncementWrapper;
+      const closeIcon = document.createElement("img");
+      closeIcon.setAttribute("id", "close-icon");
+      closeIcon.setAttribute("src", "/static/indigo/images/x.png");
+      closeIcon.setAttribute("alt", "close");
+      closeIcon.setAttribute("class", "close");
+      closeIcon.addEventListener("click", function() {
+        announcementWrapper.style.display = "none";
+      });
 
-  if (document.cookie.includes(cookieName)) {
-    announcementWrapper.style.display = 'none';
-    globalHeader.style.top = '0';
-    contentWrapper.style.marginTop= '75px';
-  }
-  // Call the function when the page loads to adjust the global header
-  window.onload = function() {
-    if (announcementWrapper.style.display !== 'none') {
-      globalHeader.style.top = '60px';
+      const contextWrapper = document.createElement("div");
+      contextWrapper.setAttribute("class", "context-wrapper");
+
+      const infoWrapper = document.createElement("div");
+      infoWrapper.setAttribute("class", "info-wrapper");
+
+      const infoIcon = document.createElement("img");
+      infoIcon.setAttribute("id", "info-icon");
+      infoIcon.setAttribute("src", "/static/indigo/images/Info-icon.png");
+      infoIcon.setAttribute("alt", "info");
+      infoIcon.setAttribute("class", "info");
+
+      const infoText = document.createElement("p");
+      infoText.textContent = _("We're excited to announce the beta release of our new web site. Please take a moment to explore, and share your feedback.");
+
+      const openWebsiteLink = document.createElement("a");
+      openWebsiteLink.addEventListener("click", function() {
+        openNewWebsite();
+        return false;
+      });
+
+      const openWebsiteButton = document.createElement("button");
+      openWebsiteButton.setAttribute("type", "button");
+      openWebsiteButton.setAttribute("class", "open-website");
+      openWebsiteButton.textContent = _("Open New Website");
+
+      // Build the HTML tree
+      infoWrapper.appendChild(infoIcon);
+      infoWrapper.appendChild(infoText);
+
+      contextWrapper.appendChild(infoWrapper);
+      contextWrapper.appendChild(openWebsiteLink);
+
+      openWebsiteLink.appendChild(openWebsiteButton);
+
+      insideWrapper.appendChild(closeIcon);
+      insideWrapper.appendChild(contextWrapper);
+
+      announcementWrapper.appendChild(insideWrapper);
+
+      // Inject the HTML into the <header> element
+      const header = document.querySelector(".global-header");
+      header.appendChild(announcementWrapper);
+
+      const mainHeader = document.querySelector('.main-header');
+      const contentWrapper = document.querySelector('.content-wrapper');
       contentWrapper.style.marginTop='135px';
-    }
-  };
-      function openNewWebsite() {
-        // Get the current hostname
-        const hostname = window.location.hostname;
+      mainHeader.style.paddingTop = '60px';
 
-        // Add the prefix and postfix to the domain name
-        const domainName = 'apps.' + hostname;
+      const cookieName = 'hide_announcement';
+      const expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + 30); // Set cookie to expire in 30 days
 
-        // Create a new URL with the modified hostname and path
-        const newUrl = new URL('https://' + domainName + '/homepage');
+        if (document.cookie.includes(cookieName)) {
+          announcementWrapper.style.display = 'none';
+          mainHeader.style.paddingTop = 'unset';
+          contentWrapper.style.marginTop='75px';
+        }
 
-        // Open the new URL in a new tab
-        window.location.href = newUrl.toString();
-      }
-</script> 
+        function hideAnnouncementWrapper() {
+          announcementWrapper.style.display = 'none';
+          mainHeader.style.paddingTop = 'unset';
+          contentWrapper.style.marginTop='75px';
+          document.cookie = cookieName + '=true; expires=' + expirationDate.toUTCString() + '; path=/';
+        }
+        function openNewWebsite() {
+          // Get the current hostname
+          const hostname = window.location.hostname;
+          // Add the prefix and postfix to the domain name
+          const domainName = 'apps.' + hostname;
+          // Create a new URL with the modified hostname and path
+          const newUrl = new URL('https://' + domainName + '/homepage');
+          // Open the new URL in a new tab
+          window.location.href = newUrl.toString();
+         }
+          // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
+      closeIcon.onclick = hideAnnouncementWrapper;
+    };
+</script>
   <div id="lean_overlay"></div>
 </body>
 </html>
