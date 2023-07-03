@@ -289,7 +289,9 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
 
       // Inject the HTML into the <header> element
       const header = document.querySelector(".global-header");
-      header.appendChild(announcementWrapper);
+      if (header) {
+        header.appendChild(announcementWrapper);
+      }
 
       const mainHeader = document.querySelector('.main-header');
       const contentWrapper = document.querySelector('.content-wrapper');
