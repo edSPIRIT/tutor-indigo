@@ -289,14 +289,14 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
 
       // Inject the HTML into the <header> element
       const header = document.querySelector(".global-header");
-      if (header) {
-        header.appendChild(announcementWrapper);
-      }
-
       const mainHeader = document.querySelector('.main-header');
       const contentWrapper = document.querySelector('.content-wrapper');
-      contentWrapper.style.marginTop='135px';
-      mainHeader.style.paddingTop = '60px';
+      if (header) {
+        header.appendChild(announcementWrapper);
+        contentWrapper.style.marginTop='135px';
+        mainHeader.style.paddingTop = '60px';
+      }
+
 
       const cookieName = 'hide_announcement';
       const expirationDate = new Date();
