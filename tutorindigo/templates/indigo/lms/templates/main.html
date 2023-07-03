@@ -264,6 +264,14 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
       openWebsiteButton.setAttribute("type", "button");
       openWebsiteButton.setAttribute("class", "open-website");
       openWebsiteButton.textContent = _("Open New Website");
+      
+      function updateButtonText() {
+        if (window.innerWidth <= 600) {
+          openWebsiteButton.textContent = _("Open");
+        } else {
+          openWebsiteButton.textContent = _("Open New Website");
+        }
+      }
 
       // Build the HTML tree
       infoWrapper.appendChild(infoIcon);
@@ -281,12 +289,14 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
 
       // Inject the HTML into the <header> element
       const header = document.querySelector(".global-header");
-      header.appendChild(announcementWrapper);
-
       const mainHeader = document.querySelector('.main-header');
       const contentWrapper = document.querySelector('.content-wrapper');
-      contentWrapper.style.marginTop='135px';
-      mainHeader.style.paddingTop = '60px';
+      if (header) {
+        header.appendChild(announcementWrapper);
+        contentWrapper.style.marginTop='135px';
+        mainHeader.style.paddingTop = '60px';
+      }
+
 
       const cookieName = 'hide_announcement';
       const expirationDate = new Date();
@@ -316,6 +326,12 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
          }
           // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
       closeIcon.onclick = hideAnnouncementWrapper;
+
+      // Call the updateButtonText function when the page loads
+      updateButtonText();
+
+      // Listen for the resize event and update the button text accordingly
+      window.addEventListener("resize", updateButtonText);
     };
 </script>
   <div id="lean_overlay"></div>
