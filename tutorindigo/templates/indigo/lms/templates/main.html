@@ -220,120 +220,120 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
   <script type="text/javascript" src="${static.url('js/header/header.js')}"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
   <script type="text/javascript" src="${static.url('js/src/jquery_extend_patch.js')}"></script>
-<script type="text/javascript">
-    window.onload = function() {
-      // Create the HTML elements
-      const announcementWrapper = document.createElement("div");
-      announcementWrapper.setAttribute("class", "announcement-wrapper");
-      announcementWrapper.setAttribute("id", "announcement-wrapper");
+## <script type="text/javascript">
+##     window.onload = function() {
+##       // Create the HTML elements
+##       const announcementWrapper = document.createElement("div");
+##       announcementWrapper.setAttribute("class", "announcement-wrapper");
+##       announcementWrapper.setAttribute("id", "announcement-wrapper");
 
-      const insideWrapper = document.createElement("div");
-      insideWrapper.setAttribute("class", "inside-wrapper");
+##       const insideWrapper = document.createElement("div");
+##       insideWrapper.setAttribute("class", "inside-wrapper");
 
-      const closeIcon = document.createElement("img");
-      closeIcon.setAttribute("id", "close-icon");
-      closeIcon.setAttribute("src", "/static/indigo/images/x.png");
-      closeIcon.setAttribute("alt", "close");
-      closeIcon.setAttribute("class", "close");
-      closeIcon.addEventListener("click", function() {
-        announcementWrapper.style.display = "none";
-      });
+##       const closeIcon = document.createElement("img");
+##       closeIcon.setAttribute("id", "close-icon");
+##       closeIcon.setAttribute("src", "/static/indigo/images/x.png");
+##       closeIcon.setAttribute("alt", "close");
+##       closeIcon.setAttribute("class", "close");
+##       closeIcon.addEventListener("click", function() {
+##         announcementWrapper.style.display = "none";
+##       });
 
-      const contextWrapper = document.createElement("div");
-      contextWrapper.setAttribute("class", "context-wrapper");
+##       const contextWrapper = document.createElement("div");
+##       contextWrapper.setAttribute("class", "context-wrapper");
 
-      const infoWrapper = document.createElement("div");
-      infoWrapper.setAttribute("class", "info-wrapper");
+##       const infoWrapper = document.createElement("div");
+##       infoWrapper.setAttribute("class", "info-wrapper");
 
-      const infoIcon = document.createElement("img");
-      infoIcon.setAttribute("id", "info-icon");
-      infoIcon.setAttribute("src", "/static/indigo/images/Info-icon.png");
-      infoIcon.setAttribute("alt", "info");
-      infoIcon.setAttribute("class", "info");
+##       const infoIcon = document.createElement("img");
+##       infoIcon.setAttribute("id", "info-icon");
+##       infoIcon.setAttribute("src", "/static/indigo/images/Info-icon.png");
+##       infoIcon.setAttribute("alt", "info");
+##       infoIcon.setAttribute("class", "info");
 
-      const infoText = document.createElement("p");
-      infoText.textContent = `${_("We're excited to announce the beta release of our new web site. Please take a moment to explore, and share your feedback.") | n}`;
+##       const infoText = document.createElement("p");
+##       infoText.textContent = `${_("We're excited to announce the beta release of our new web site. Please take a moment to explore, and share your feedback.") | n}`;
 
-      const openWebsiteLink = document.createElement("a");
-      openWebsiteLink.addEventListener("click", function() {
-        openNewWebsite();
-        return false;
-      });
+##       const openWebsiteLink = document.createElement("a");
+##       openWebsiteLink.addEventListener("click", function() {
+##         openNewWebsite();
+##         return false;
+##       });
 
-      const openWebsiteButton = document.createElement("button");
-      openWebsiteButton.setAttribute("type", "button");
-      openWebsiteButton.setAttribute("class", "open-website");
-      openWebsiteButton.textContent = `${_("Open New Website")}`;
+##       const openWebsiteButton = document.createElement("button");
+##       openWebsiteButton.setAttribute("type", "button");
+##       openWebsiteButton.setAttribute("class", "open-website");
+##       openWebsiteButton.textContent = `${_("Open New Website")}`;
 
-      function updateButtonText() {
-        if (window.innerWidth <= 600) {
-          openWebsiteButton.textContent = `${_("Open")}`;
-        } else {
-          openWebsiteButton.textContent = `${_("Open New Website")}`;
-        }
-      }
+##       function updateButtonText() {
+##         if (window.innerWidth <= 600) {
+##           openWebsiteButton.textContent = `${_("Open")}`;
+##         } else {
+##           openWebsiteButton.textContent = `${_("Open New Website")}`;
+##         }
+##       }
 
-      // Build the HTML tree
-      infoWrapper.appendChild(infoIcon);
-      infoWrapper.appendChild(infoText);
+##       // Build the HTML tree
+##       infoWrapper.appendChild(infoIcon);
+##       infoWrapper.appendChild(infoText);
 
-      contextWrapper.appendChild(infoWrapper);
-      contextWrapper.appendChild(openWebsiteLink);
+##       contextWrapper.appendChild(infoWrapper);
+##       contextWrapper.appendChild(openWebsiteLink);
 
-      openWebsiteLink.appendChild(openWebsiteButton);
+##       openWebsiteLink.appendChild(openWebsiteButton);
 
-      insideWrapper.appendChild(closeIcon);
-      insideWrapper.appendChild(contextWrapper);
+##       insideWrapper.appendChild(closeIcon);
+##       insideWrapper.appendChild(contextWrapper);
 
-      announcementWrapper.appendChild(insideWrapper);
+##       announcementWrapper.appendChild(insideWrapper);
 
-      // Inject the HTML into the <header> element
-      const header = document.querySelector(".global-header");
-      const mainHeader = document.querySelector('.main-header');
-      const contentWrapper = document.querySelector('.content-wrapper');
-      if (header) {
-        header.appendChild(announcementWrapper);
-        contentWrapper.style.marginTop='135px';
-        mainHeader.style.paddingTop = '60px';
-      }
+##       // Inject the HTML into the <header> element
+##       const header = document.querySelector(".global-header");
+##       const mainHeader = document.querySelector('.main-header');
+##       const contentWrapper = document.querySelector('.content-wrapper');
+##       if (header) {
+##         header.appendChild(announcementWrapper);
+##         contentWrapper.style.marginTop='135px';
+##         mainHeader.style.paddingTop = '60px';
+##       }
 
 
-      const cookieName = 'hide_announcement';
-      const expirationDate = new Date();
-      expirationDate.setDate(expirationDate.getDate() + 30); // Set cookie to expire in 30 days
+##       const cookieName = 'hide_announcement';
+##       const expirationDate = new Date();
+##       expirationDate.setDate(expirationDate.getDate() + 30); // Set cookie to expire in 30 days
 
-        if (document.cookie.includes(cookieName)) {
-          announcementWrapper.style.display = 'none';
-          mainHeader.style.paddingTop = 'unset';
-          contentWrapper.style.marginTop='75px';
-        }
+##         if (document.cookie.includes(cookieName)) {
+##           announcementWrapper.style.display = 'none';
+##           mainHeader.style.paddingTop = 'unset';
+##           contentWrapper.style.marginTop='75px';
+##         }
 
-        function hideAnnouncementWrapper() {
-          announcementWrapper.style.display = 'none';
-          mainHeader.style.paddingTop = 'unset';
-          contentWrapper.style.marginTop='75px';
-          document.cookie = cookieName + '=true; expires=' + expirationDate.toUTCString() + '; path=/';
-        }
-        function openNewWebsite() {
-          // Get the current hostname
-          const hostname = window.location.hostname;
-          // Add the prefix and postfix to the domain name
-          const domainName = 'apps.' + hostname;
-          // Create a new URL with the modified hostname and path
-          const newUrl = new URL('https://' + domainName + '/homepage');
-          // Open the new URL in a new tab
-          window.location.href = newUrl.toString();
-         }
-          // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
-      closeIcon.onclick = hideAnnouncementWrapper;
+##         function hideAnnouncementWrapper() {
+##           announcementWrapper.style.display = 'none';
+##           mainHeader.style.paddingTop = 'unset';
+##           contentWrapper.style.marginTop='75px';
+##           document.cookie = cookieName + '=true; expires=' + expirationDate.toUTCString() + '; path=/';
+##         }
+##         function openNewWebsite() {
+##           // Get the current hostname
+##           const hostname = window.location.hostname;
+##           // Add the prefix and postfix to the domain name
+##           const domainName = 'apps.' + hostname;
+##           // Create a new URL with the modified hostname and path
+##           const newUrl = new URL('https://' + domainName + '/homepage');
+##           // Open the new URL in a new tab
+##           window.location.href = newUrl.toString();
+##          }
+##           // Add an onclick event to the close icon button that hides the announcement wrapper and adjusts the global header
+##       closeIcon.onclick = hideAnnouncementWrapper;
 
-      // Call the updateButtonText function when the page loads
-      updateButtonText();
+##       // Call the updateButtonText function when the page loads
+##       updateButtonText();
 
-      // Listen for the resize event and update the button text accordingly
-      window.addEventListener("resize", updateButtonText);
-    };
-</script>
+##       // Listen for the resize event and update the button text accordingly
+##       window.addEventListener("resize", updateButtonText);
+##     };
+## </script>
   <div id="lean_overlay"></div>
 </body>
 </html>
