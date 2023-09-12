@@ -64,61 +64,61 @@ h3 span,
   ); // sticky footer
 }
 ////announcement-wrapper
-.announcement-wrapper {
-  position: fixed;
-  top: 0;
-  z-index: 201;
-  width: 100%;
-  font-size: 16px;
+// .announcement-wrapper {
+//   position: fixed;
+//   top: 0;
+//   z-index: 201;
+//   width: 100%;
+//   font-size: 16px;
 
-  .inside-wrapper {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    background-color: #313131;
-    color: #fff;
-  }
+//   .inside-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     position: relative;
+//     text-align: center;
+//     background-color: #313131;
+//     color: #fff;
+//   }
 
-  .close {
-    position: absolute;
-    left: 24px;
-    top: 18px;
-    color: #fff;
-    cursor: pointer;
-  }
-  .info {
-    color: #f0cc00;
-    margin-inline: 6px;
-  }
-  .info-wrapper {
-    display: flex;
-    align-items: center;
-    p {
-      line-height: 24px;
-    }
-  }
-  .context-wrapper {
-    padding: 10px 10px 10px 60px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    .open-website {
-      color: #ff8057;
-      border: 1px solid #ff8057;
-      background-color: transparent;
-      background-image: unset;
-      box-shadow: unset;
-      padding: 6px 12px;
-      border-radius: 8px;
-      margin-inline: 6px;
-      font-size: 16px;
-      font-weight: 700;
-      width: max-content;
-    }
-  }
-}
+//   .close {
+//     position: absolute;
+//     left: 24px;
+//     top: 18px;
+//     color: #fff;
+//     cursor: pointer;
+//   }
+//   .info {
+//     color: #f0cc00;
+//     margin-inline: 6px;
+//   }
+//   .info-wrapper {
+//     display: flex;
+//     align-items: center;
+//     p {
+//       line-height: 24px;
+//     }
+//   }
+//   .context-wrapper {
+//     padding: 10px 10px 10px 60px;
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//     justify-content: center;
+//     .open-website {
+//       color: #ff8057;
+//       border: 1px solid #ff8057;
+//       background-color: transparent;
+//       background-image: unset;
+//       box-shadow: unset;
+//       padding: 6px 12px;
+//       border-radius: 8px;
+//       margin-inline: 6px;
+//       font-size: 16px;
+//       font-weight: 700;
+//       width: max-content;
+//     }
+//   }
+// }
 @media (max-width: 768px) {
   header.global-header {
     top: 0 !important;
