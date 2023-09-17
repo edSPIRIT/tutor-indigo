@@ -1,14 +1,8 @@
 ## mako
 <%page expression_filter="h"/>
 <%!
-  from django.urls import reverse
   from django.utils.translation import gettext as _
-  from lms.djangoapps.branding.api import get_footer
-  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
-  from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILITY_POLICY_PAGE
-  from openedx.core.djangolib.markup import HTML, Text
   from django.utils.translation import get_language_bidi
-
 %>
 
 % if uses_bootstrap:
