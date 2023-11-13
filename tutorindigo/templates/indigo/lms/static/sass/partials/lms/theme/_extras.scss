@@ -54,9 +54,7 @@ h3 span,
 
 #content.content-wrapper {
   @include media-breakpoint-up(lg) {
-    padding-top: $content-padding-top;
     padding-bottom: $content-padding-bottom;
-    margin-top: $header-height;
   }
   min-height: calc(
     100vh - #{$header-height + $content-padding-top + $content-padding-bottom +
