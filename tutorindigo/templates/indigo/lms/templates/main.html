@@ -171,15 +171,15 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
 % endif
 
 ## js from admin console 
-<script type="text/javascript" src="/static/assets/js/theme.js"></script>
+## <script type="text/javascript" src="/static/assets/js/theme.js"></script>
 </head>
 
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
 ## loading 
-<div class="loader-bg">
-<span class="loader"><span class="loader-inner"></span></span>
-</div>
+## <div class="loader-bg">
+## <span class="loader"><span class="loader-inner"></span></span>
+## </div>
 
 
 <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />

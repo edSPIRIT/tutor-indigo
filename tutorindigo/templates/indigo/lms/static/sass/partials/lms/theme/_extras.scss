@@ -340,32 +340,32 @@ nav.wrapper-preview-menu {
 }
 
 // loader
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #fff;
-  animation: loader 2s infinite ease;
-}
-.loader-bg {
-  background-color: #242f3f;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
-}
+// .loader {
+//   display: inline-block;
+//   width: 30px;
+//   height: 30px;
+//   position: relative;
+//   border: 4px solid #fff;
+//   animation: loader 2s infinite ease;
+// }
+// .loader-bg {
+//   background-color: #242f3f;
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+// }
+// .loader-inner {
+//   vertical-align: top;
+//   display: inline-block;
+//   width: 100%;
+//   background-color: #fff;
+//   animation: loader-inner 2s infinite ease-in;
+// }
 
 @keyframes loader {
   0% {
