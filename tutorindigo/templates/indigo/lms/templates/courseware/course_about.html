@@ -6,13 +6,10 @@ from django.utils.translation import pgettext
 from django.urls import reverse
 from lms.djangoapps.courseware.courses import get_course_about_section
 from django.conf import settings
-from six import text_type
 from common.djangoapps.edxmako.shortcuts import marketing_link
 from openedx.core.djangolib.js_utils import js_escaped_string
 from openedx.core.djangolib.markup import clean_dangerous_html, HTML, Text
 from openedx.core.lib.courses import course_image_url
-
-from six import string_types
 %>
 
 <%inherit file="../main.html" />
@@ -57,28 +54,42 @@ from six import string_types
 
 <%block name="pagetitle">${course.display_name_with_default}</%block>
 
-<section class="course-info">
+<section class="course-info about container">
 
   <%block name="course_about_header">
+  <!-- Course profile header is updated inclusive of course heading and course image. -->
   <header class="course-profile">
     <div class="intro-inner-wrapper">
-      <div class="table">
-      <section class="intro">
-        <div class="heading-group">
+      <div class="profile-top">
+        % if get_course_about_section(request, course, "video"):
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <img src="${course_image_urls['large']}" alt="" />
+            <div class="play-intro"></div>
+          </div>
+        </a>
+        %else:
+        <div class="media">
+          <div class="hero">
+            <!-- NEW IN INDIGO: Add fallback image in case of no course-image using onerror -->
+            <img src="${course_image_urls['large']}" onerror="this.src='/theming/asset/images/no_course_image.png';" alt="" />
+          </div>
+        </div>
+        % endif
+        <div class="info-profile">
           <h1>
             ${course.display_name_with_default}
           </h1>
-          <br />
-          <span>${course.display_org_with_default}</span>
+          <span class="org">${course.display_org_with_default}</span>
         </div>
-
-        <div class="main-cta">
+      </div>
+      <div class="main-cta">
         %if user.is_authenticated and registered:
           %if show_courseware_link:
             <a href="${course_target}">
           %endif
 
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
+          <span class="register disabled">${_("Already Enrolled")}</span>
 
           %if show_courseware_link:
             <strong>${_("View Course")}</strong>
@@ -95,7 +106,7 @@ from six import string_types
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
         % elif not is_shib_course and not can_enroll:
-          <span class="register disabled">${_("Enrollment is Closed")}</span>
+        <span class="register closed disabled"><i class="fa fa-lock" aria-hidden="true"></i> ${_("Enrollment is Closed")}</span>
         %elif allow_anonymous:
           %if show_courseware_link:
             <a href="${course_target}">
@@ -113,41 +124,17 @@ from six import string_types
             else:
               href_class = "register"
           %>
-          % if request.user.is_anonymous or request.user.is_active:
           <a href="${reg_href}" class="${href_class}">
             ${_("Enroll Now")}
           </a>
-          % else:
-            <div class="empty-dashboard-message">
-                <p>${_("Activate your account!")}</p>
-                <p class="custom-message">${_("Check your %s inbox for an account activation link from %s") %(request.user.email,platform_name)}</p>
-            </div>
-            % endif
           <div id="register_error"></div>
         %endif
         </div>
-
-      </section>
-      % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-          <div class="play-intro"></div>
-        </div>
-      </a>
-      %else:
-      <div class="media">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-        </div>
-      </div>
-      % endif
-    </div>
       </div>
   </header>
   </%block>
 
-  <div class="container">
+  <div class="about-content">
 
     <%block name="course_about_details">
     <div class="details">
@@ -162,23 +149,29 @@ from six import string_types
       </div>
     </div>
     </%block>
+    
+    <!-- NEW IN INDIGO sidebar is improved with better icons -->
 
     <div class="course-sidebar">
       <div class="course-summary">
-
-        <%include file="course_about_sidebar_header.html" />
-
+        <h2>Course Summary</h2>
         <%block name="course_about_important_dates">
         <ol class="important-dates">
-          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default}</span></li>
+          <li class="important-dates-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.8201 8.99997L12.0001 12.72L5.18007 8.99997L12.0001 5.27997L18.8201 8.99997ZM12 18.72L17 15.99V12.27L12 15L7 12.27V15.99L12 18.72Z" fill="#9CA3AF"/>
+              </svg>
+            <p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default}</span></li>
           % if not course.start_date_is_still_default:
               <%
                   course_start_date = course.advertised_start or course.start
               %>
             <li class="important-dates-item">
-              <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4H19C20.1 4 21 4.9 21 6V20C21 21.1 20.1 22 19 22H5C3.89 22 3 21.1 3 20L3.01 6C3.01 4.9 3.89 4 5 4H6V2H8V4H16V2H18V4ZM5 10V20H19V10H5ZM19 8H5V6H19V8ZM17 13H12V18H17V13Z" fill="#9CA3AF"/>
+                </svg>
               <p class="important-dates-item-title">${_("Classes Start")}</p>
-              % if isinstance(course_start_date, string_types):
+              % if isinstance(course_start_date, str):
                   <span class="important-dates-item-text start-date">${course_start_date}</span>
               % else:
                   <%
@@ -196,9 +189,11 @@ from six import string_types
                 %>
 
             <li class="important-dates-item">
-                <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4H19C20.1 4 21 4.9 21 6V20C21 21.1 20.1 22 19 22H5C3.89 22 3 21.1 3 20L3.01 6C3.01 4.9 3.89 4 5 4H6V2H8V4H16V2H18V4ZM5 10V20H19V10H5ZM19 8H5V6H19V8ZM17 13H12V18H17V13Z" fill="#9CA3AF"/>
+                </svg>
                 <p class="important-dates-item-title">${_("Classes End")}</p>
-                  % if isinstance(course_end_date, string_types):
+                  % if isinstance(course_end_date, str):
                       <span class="important-dates-item-text final-date">${course_end_date}</span>
                   % else:
                     <%
@@ -224,7 +219,7 @@ from six import string_types
           %endif
 
           % if pre_requisite_courses:
-          <% prc_target = reverse('about_course', args=[text_type(pre_requisite_courses[0]['key'])]) %>
+          <% prc_target = reverse('about_course', args=[str(pre_requisite_courses[0]['key'])]) %>
           <li class="prerequisite-course important-dates-item">
             <span class="icon fa fa-list-ul" aria-hidden="true"></span>
             <p class="important-dates-item-title">${_("Prerequisites")}</p>
@@ -245,6 +240,7 @@ from six import string_types
           % endif
         </ol>
         </%block>
+        <%include file="course_about_sidebar_header.html" />
     </div>
 
       ## For now, ocw links are the only thing that goes in additional resources
