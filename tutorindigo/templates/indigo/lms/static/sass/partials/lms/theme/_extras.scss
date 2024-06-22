@@ -688,3 +688,16 @@ body.view-wiki {
 @import "../../../home/home";
 @import "../../../programs/programs";
 @import "../../../certificates/certificate";
+
+
+#footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .footer-top{
+    margin: 0;
+  }
+  #edspirit-logo-replace-handle {
+  text-decoration: none; 
+  } 
+}
