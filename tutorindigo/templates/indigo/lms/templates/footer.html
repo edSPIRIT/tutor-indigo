@@ -99,6 +99,17 @@
           </ol>
         </nav>
         {% endif %}
+        {% if INDIGO_FOOTER_NAV_LINKS %}
+        <nav class="nav-legal" aria-label="${_('Legal')}">
+          <ul>
+            {% for link in INDIGO_FOOTER_NAV_LINKS %}
+              <li>
+                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% endif %}
       </div>
 
       <div class="colophon">

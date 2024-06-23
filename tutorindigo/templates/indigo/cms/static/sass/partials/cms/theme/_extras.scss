@@ -90,6 +90,12 @@
   }
 }
 
+.colophon{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .view-dashboard, .wrapper-view {
   display: flex;
   flex-direction: column;
@@ -99,7 +105,7 @@
   flex-grow: 1;
 }
 
-#footer-openedx .grid-container {
+#footer-openedx {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1600px;
@@ -113,6 +119,7 @@
 .footer-about-openedx p {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap:16px
 }
 
@@ -121,5 +128,14 @@
   gap:8px;
     a {
       color:#374151;
+      &:hover {
+        color: #3b85ff;
+      }
     }
+}
+
+.nav-legal ul {
+  display: flex;
+  gap:8px;
+  font-size: 12px;
 }

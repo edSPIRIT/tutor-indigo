@@ -241,17 +241,53 @@ nav.wrapper-preview-menu {
   .copyright {
     display: none;
   }
+  
+  #footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-top{
+      margin: 0;
+    }
+    #edspirit-logo-replace-handle {
+    text-decoration: none; 
+    } 
+  }
+
+  .footer-top{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+  }
+
+  .nav-colophon ol {
+    display: flex;
+    gap:8px;
+    padding:0 !important;
+
+      li{
+         padding:0 !important;
+      }
+
+      a {
+        color:#374151;
+        &:hover {
+          color: #3b85ff !important;
+        }
+      }
+  }
+
   .nav-legal ul {
-    display: inline-block;
-  }
-  footer#footer-openedx .footer-about-openedx {
-    a {
-      float: none;
-    }
-    p {
-      text-align: right;
+    display: flex;
+    gap:8px;
+    font-size: 12px;
+
+    a{
+      color: #3b85ff;
     }
   }
+  
 }
 .container,
 .main-container,
@@ -690,14 +726,3 @@ body.view-wiki {
 @import "../../../certificates/certificate";
 
 
-#footer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .footer-top{
-    margin: 0;
-  }
-  #edspirit-logo-replace-handle {
-  text-decoration: none; 
-  } 
-}

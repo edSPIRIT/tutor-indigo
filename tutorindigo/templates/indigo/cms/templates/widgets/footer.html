@@ -22,6 +22,17 @@
           </nav>
           {% endif %}
 
+          {% if INDIGO_FOOTER_NAV_LINKS %}
+          <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
+            <ul class="navbar-nav">
+              {% for link in INDIGO_FOOTER_NAV_LINKS %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ link['url'] }}">{{ link['title'] }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          {% endif %}
         </div>
         <div class="col-md-3">
           % if not hide_openedx_link:
@@ -60,6 +71,17 @@
         </nav>
         {% endif %}
 
+        {% if INDIGO_FOOTER_NAV_LINKS %}
+        <nav class="nav-legal" aria-label="${_('Legal')}">
+          <ul>
+            {% for link in INDIGO_FOOTER_NAV_LINKS %}
+              <li>
+                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% endif %}
       </div>
 
       % if not hide_openedx_link:
