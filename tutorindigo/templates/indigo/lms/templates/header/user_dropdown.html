@@ -12,6 +12,7 @@ from django.utils.translation import gettext as _
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
 from openedx.core.djangoapps.user_api.accounts.toggles import should_redirect_to_order_history_microfrontend
 from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name, get_enterprise_learner_portal
+from urllib.parse import urlencode
 %>
 
 <%
@@ -44,6 +45,8 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
         % if should_show_order_history:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.ORDER_HISTORY_MICROFRONTEND_URL}" role="menuitem">${_("Order History")}</a></div>
         % endif
-        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item">
+            <a href="${reverse('logout')}?${urlencode({'next':settings.MFE_CONFIG['MARKETING_SITE_BASE_URL']})}" role="menuitem">${_("Sign Out")}</a>
+        </div>
     </div>
 </div>
