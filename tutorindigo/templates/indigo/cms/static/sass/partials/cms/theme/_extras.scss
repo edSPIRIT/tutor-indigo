@@ -531,3 +531,9 @@ footer {
 .nav-item-dropdown .dropdown-icon.rotated {
   transform: rotate(180deg); /* Rotate 180 degrees when dropdown is open */
 }
+
+.modal-type-edit-settings {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
