@@ -159,11 +159,12 @@
   }
 }
 
+.color-white {
+  background-color: white;
+}
+
 footer {
   border-top: 1px solid #f2f0ef;
-  .color-white {
-    background-color: white;
-  }
   a:hover {
     text-decoration: none !important;
   }
@@ -492,6 +493,8 @@ footer {
 
 /* Base styles for the dropdown */
 .dropdown-language-menu {
+  scrollbar-width: thin;
+  width: 100%;
   position: absolute;
   z-index: 1000;
   max-height: 115px;
@@ -527,8 +530,4 @@ footer {
 
 .nav-item-dropdown .dropdown-icon.rotated {
   transform: rotate(180deg); /* Rotate 180 degrees when dropdown is open */
-}
-
-.nav-account {
-  background-color: red;
 }

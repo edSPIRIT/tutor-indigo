@@ -1067,6 +1067,8 @@ footer {
 
 /* Base styles for the dropdown */
 .dropdown-language-menu {
+  scrollbar-width: thin;
+  width: 100%;
   position: absolute;
   z-index: 1000;
   max-height: 115px;
