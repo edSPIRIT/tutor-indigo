@@ -1105,3 +1105,16 @@ footer {
 .nav-item-dropdown .dropdown-icon.rotated {
   transform: rotate(180deg); /* Rotate 180 degrees when dropdown is open */
 }
+
+.btn-lti-new-window {
+  background-color: #262b54;
+  font-size: 18px;
+  color: white;
+  text-shadow: unset;
+  background-clip: unset;
+  background-image: unset;
+  font-weight: 400;
+  box-shadow: unset;
+  border-radius: 4px;
+  padding: 11px 18px;
+}
