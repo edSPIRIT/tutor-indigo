@@ -6,104 +6,29 @@
 %>
 
 % if uses_bootstrap:
-  <div class="container-fluid wrapper-footer">
-    <footer>
-      <div class="row">
-        <div class="col-md-9">
-          {% if INDIGO_FOOTER_NAV_LINKS %}
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
-            <ul class="navbar-nav">
-              {% for link in INDIGO_FOOTER_NAV_LINKS %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ link['url'] }}">{{ link['title'] }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-          {% endif %}
-
-          {% if INDIGO_FOOTER_LEGAL_LINKS %}
-          <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
-            <ul class="navbar-nav">
-              {% for link in INDIGO_FOOTER_LEGAL_LINKS %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ link['url'] }}">{{ link['title'] }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-          {% endif %}
-        </div>
-        <div class="col-md-3">
-          % if not hide_openedx_link:
-            <div class="footer-about-openedx">
-              <p>
-                <a id="edx-logo-remove-handle" href="https://open.edx.org/" rel="noopener" target="_blank">
-                  <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png" alt="open.edx.org" width="140" />
-                </a>
-                <a id="edspirit-logo-replace-handle" class="edspirit-logo" href="https://edspirit.com" rel="noopener" target="_blank">
-                  <img src="/static/studio/indigo/images/edspirit-logo.png" alt="Powered by Edspirit" width="140">
-                </a>
-              </p>
-            </div>
-          % endif
-        </div>
+  <footer class="color-white">
+    <div class="custom-container mb-4 pt-5">
+      <div class="footer-wrapper">
+        <div class="footer-desc-wrapper" id="footer-desc-wrapper"></div>
+        <div class="footer-col1-wrapper" id="footer-col1-wrapper"></div>
+        <div class="footer-col2-wrapper" id="footer-col2-wrapper"></div>
+        <div class="footer-col3-wrapper" id="footer-col3-wrapper"></div>
       </div>
-    </footer>
-  </div>
+    </div>
+    <div class="footer-copy-right-container" id="footer-copy-right-container"></div>
+  </footer>
 % else:
-  <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container"
-      % if bidi:
-        dir=${bidi}
-      % endif
-    >
-      <div class="colophon">
-        {% if INDIGO_FOOTER_NAV_LINKS %}
-        <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              {% for link in INDIGO_FOOTER_NAV_LINKS %}
-              <li>
-                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
-              </li>
-              {% endfor %}
-          </ol>
-        </nav>
-        {% endif %}
-
-        {% if INDIGO_FOOTER_LEGAL_LINKS %}
-        <nav class="nav-legal" aria-label="${_('Legal')}">
-          <ul>
-            {% for link in INDIGO_FOOTER_LEGAL_LINKS %}
-              <li>
-                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-        {% endif %}
+  <footer class="color-white">
+    <div class="custom-container mb-4 pt-5">
+      <div class="footer-wrapper">
+        <div class="footer-desc-wrapper" id="footer-desc-wrapper"></div>
+        <div class="footer-col1-wrapper" id="footer-col1-wrapper"></div>
+        <div class="footer-col2-wrapper" id="footer-col2-wrapper"></div>
+        <div class="footer-col3-wrapper" id="footer-col3-wrapper"></div>
       </div>
-
-      % if not hide_openedx_link:
-      <div class="footer-about-openedx">
-        <p>
-          <a id="edx-logo-remove-handle" href="https://open.edx.org/" rel="noopener" target="_blank">
-            <img src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png" alt="open.edx.org" width="140" />
-          </a>
-          <a id="edspirit-logo-replace-handle"
-            % if get_language_bidi():
-            class="edspirit-logo-rtl"
-            % else:
-            class="edspirit-logo"
-            % endif
-            href="https://edspirit.com" rel="noopener" target="_blank">
-            <img src="/static/studio/indigo/images/edspirit-logo.png" alt="Powered by Edspirit" width="140">
-          </a>
-        </p>
-      </div>
-      % endif
-    </footer>
-  </div>
+    </div>
+    <div class="footer-copy-right-container" id="footer-copy-right-container"></div>
+  </footer>
 % endif
 % if include_dependencies:
   <%static:js group='base_vendor'/>
