@@ -109,37 +109,47 @@ hooks.Filters.ENV_PATCHES.add_items(
         (
             "mfe-dockerfile-post-npm-install-learning",
             """
+RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+
 COPY indigo/env.config.jsx /openedx/app/
 """,
         ),
         (
             "mfe-dockerfile-post-npm-install-authn",
             """
-            """,
+""",
         ),
         # Tutor-Indigo v2.1 targets the styling updates in discussions and learner-dashboard MFE
         # brand-openedx is related to styling updates while others are for header and footer updates
         (
             "mfe-dockerfile-post-npm-install-discussions",
             """
+RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+
 COPY indigo/env.config.jsx /openedx/app/
 """,
         ),
         (
             "mfe-dockerfile-post-npm-install-learner-dashboard",
             """
+RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+
 COPY indigo/env.config.jsx /openedx/app/
 """,
         ),
         (
             "mfe-dockerfile-post-npm-install-profile",
             """
+RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+
 COPY indigo/env.config.jsx /openedx/app/
 """,
         ),
         (
             "mfe-dockerfile-post-npm-install-account",
             """
+RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+
 COPY indigo/env.config.jsx /openedx/app/
 """,
         ),
