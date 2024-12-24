@@ -36,10 +36,11 @@
     </div>
     <div class="footer-copy-right-container" id="footer-copy-right-container"></div>
   </footer>
+% endif
+
 ## js from admin console
 <script type="text/javascript" src="/static/assets/js/theme.js"></script>
 
-% endif
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>
