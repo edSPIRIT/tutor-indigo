@@ -555,3 +555,9 @@ footer {
   border-radius: 4px;
   padding:11px 18px;
 }
+
+.has-navigation{
+  .nav-actions{
+    bottom: 15px !important;
+  }
+}
