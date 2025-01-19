@@ -1740,3 +1740,19 @@ footer {
 .edspirit-logo-rtl {
   margin-left: 2rem;
 }
+
+.lang_fa {
+  * {
+    font-family: IRANSans, FontAwesome, 'Open Sans', 'tinymce' !important ;
+  }
+}
+.lang_fa-ir {
+  * {
+    font-family: IRANSans, FontAwesome, 'Open Sans', 'tinymce' !important ;
+  }
+}
+[lang="fa"] {
+  * {
+    font-family: IRANSans, FontAwesome, 'Open Sans', 'tinymce' !important;
+  }
+}
