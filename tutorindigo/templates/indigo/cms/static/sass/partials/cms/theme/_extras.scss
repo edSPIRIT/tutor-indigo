@@ -561,3 +561,23 @@ footer {
     bottom: 15px !important;
   }
 }
+
+
+
+// Add styles for RTL support
+[dir="rtl"] .pagination-full {
+  .nav-item.previous {
+    .nav-link {
+      .icon {
+        transform: rotate(180deg); // Rotate the icon for RTL
+      }
+    }
+  }
+  .nav-item.next {
+    .nav-link {
+      .icon {
+        transform: rotate(180deg); // Rotate the icon for RTL
+      }
+    }
+  }
+}
